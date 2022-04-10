@@ -58,7 +58,7 @@ class protocol_get_available_stock : public transfer_protocol
 
 		json ret = res;
 
-		return ret;
+		return transfer_protocol_response_ptr{};
 	}
 };
 

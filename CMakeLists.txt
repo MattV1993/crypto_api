@@ -63,7 +63,7 @@ target_include_directories(stock_trading_bot PUBLIC
 )
 
 target_include_directories(stock_trading_bot PUBLIC "${SRC_DIR}/third_party/cryptopp")
-target_link_libraries(stock_trading_bot "${SRC_DIR}/third_party/lib/cryptopp/Debug/cryptlib.lib")
+target_link_libraries(stock_trading_bot "${SRC_DIR}/third_party/lib/cryptopp/Release/cryptlib.lib")
 
 target_include_directories(stock_trading_bot PUBLIC "${SRC_DIR}/third_party/di/include")
 
@@ -71,7 +71,7 @@ target_include_directories(stock_trading_bot PUBLIC "${SRC_DIR}/third_party/skia
 target_include_directories(stock_trading_bot PUBLIC "${SRC_DIR}/third_party/skia/skia/")
 
 target_link_libraries(stock_trading_bot
-    "${SRC_DIR}/third_party/skia/libs/Debug/skia.lib"
+    "${SRC_DIR}/third_party/skia/lib/Release/skia.lib"
     opengl32.lib
 )
 
