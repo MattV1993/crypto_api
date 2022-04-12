@@ -24,3 +24,7 @@ Setup
 - run: mkdir build
 - run: cd build
 - run: cmake ..
+
+Limitations
+-----------
+- Currently only works in release due to large debug library sizes
