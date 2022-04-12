@@ -7,6 +7,7 @@
 
 namespace stb
 {
+	// Interface for api response
 	struct transfer_protocol_response
 	{
 		virtual ~transfer_protocol_response() = default;
@@ -26,6 +27,7 @@ namespace stb
 
 	using transfer_protocol_response_ptr = std::unique_ptr<transfer_protocol_response>;
 
+	// Interface for data communication protocol for api
 	class transfer_protocol
 	{
 	public:

@@ -32,6 +32,7 @@ std::string stb::stock_api::cdc::to_string(const request_params_var& params)
 
 void stb::stock_api::cdc::to_json(nlohmann::json& j, const request_params_var& req)
 {
+	// auto lambda to convert all possible request_params_var types to json
 	std::visit([&j](auto&& arg)
 		{
 			j = arg;

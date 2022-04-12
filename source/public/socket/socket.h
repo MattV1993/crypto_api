@@ -6,6 +6,8 @@ namespace stb::http
 {
 	class socket_impl;
 
+	// http socket
+	// uses pimp pattern
 	class socket : public transfer_protocol
 	{
 	public:

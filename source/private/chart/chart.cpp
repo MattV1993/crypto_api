@@ -18,8 +18,6 @@ namespace
 	void draw_candle_stick(const stb::stock_api::candlestick& c, float x, float thickness, float scale, SkCanvas& canvas)
 	{
 		SkPaint paint;
-		//paint.setStrokeWidth(1);
-		//paint.setStyle(SkPaint::kStroke_Style);
 
 		if (c.open > c.close)
 		{
@@ -29,28 +27,6 @@ namespace
 		{
 			paint.setColor({ 0.f, 1.f, 0.f, 1.f });
 		}
-
-		/*float start = c.high;
-		float end = std::max(c.open, c.close);
-
-		SkPath path;
-		path.moveTo(x + (thickness / 2), start * scale);
-		path.lineTo(x + (thickness / 2), end * scale);
-
-		start = std::min(c.close, c.open);
-		end = c.low;
-
-		path.moveTo(x + (thickness / 2), start * scale);
-		path.lineTo(x + (thickness / 2), end * scale);
-
-		canvas.drawPath(path, paint);
-
-		paint.setStyle(SkPaint::kFill_Style);
-
-		draw_rect(
-			stb::stock_api::frect{ {x, c.open * scale}, {x + thickness, c.close * scale} },
-			canvas, paint);
-			*/
 
 		paint.setStyle(SkPaint::kFill_Style);
 
@@ -100,15 +76,6 @@ void stb::stock_api::chart::chart::draw(SkCanvas& canvas)
 	float scale = 0.01;
 	float thickness = 5;
 	float x = 0;
-
-	/*paint.setStrokeWidth(1);
-	paint.setStyle(SkPaint::kFill_Style);
-
-	paint.setColor({ 1, 0, 0, 1 });
-	draw_rect(frect{ fvec2{10, 20}, fvec2{ 50, 50} }, canvas, paint);
-
-	paint.setColor({ 0, 1, 0, 1 });
-	draw_rect(frect{ {50, 50}, { 90, 90} }, canvas, paint);*/
 
 	for (const auto& candlestick : candlesticks)
 	{

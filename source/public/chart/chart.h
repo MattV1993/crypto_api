@@ -28,7 +28,7 @@ namespace stb::stock_api
 	using irect = rect<int64_t>;
 	using frect = rect<float>;
 
-
+	// Displays stock data
 	class chart
 	{
 	public:

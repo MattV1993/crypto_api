@@ -53,6 +53,7 @@ namespace stb::stock_api
 		months_one
 	};
 
+	// Base class for api
 	class api
 	{
 	public:

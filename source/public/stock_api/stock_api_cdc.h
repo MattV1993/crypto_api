@@ -1,5 +1,7 @@
 #pragma once
 
+// Functions and classes for handling communication with crypto.com api
+
 #include "stock_api.h"
 
 #include "nlohmann/json.hpp"
